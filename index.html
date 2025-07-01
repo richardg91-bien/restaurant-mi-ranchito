@@ -4,15 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mi Ranchito - Antojos Venezolanos</title>
+    
+
+    
+    
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+     <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+    
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="styles.css" />
+   
 </head>
 <body>
   <nav>
@@ -26,14 +32,15 @@
       </div>
       <div class="menu-links">
   <a href="#productos-destacados">Platos</a>
-  <a href="#menus">Combinaciones</a>
   <a href="#nosotros">Nosotros</a>
+  <a href="#menus">Combinaciones</a>
   <a href="#testimonios">Testimonios</a>
   <a href="#redes">Contacto</a>
 </div>
 
       <div class="search-bar">
-        <input type="text" id="buscador" placeholder="Buscar plato..." />
+        <input type="text" id="buscador" placeholder="Buscar plato...">
+
         <button id="btnBuscar">Buscar</button>
       </div>
     </div>
@@ -58,11 +65,20 @@
 
   <main>
     <section id="nosotros">
-      <h2>Nuestra Historia</h2>
-      <p>
-        Mi Ranchito nació del amor por los auténticos sabores venezolanos, trayendo a tu mesa la tradición y el gusto casero de nuestras empanadas y tequeños.
-      </p>
-    </section>
+  <h2>Nuestra Historia</h2>
+  <p>
+    Mi Ranchito nació en el corazón de una familia venezolana con una profunda nostalgia por los sabores de su tierra. Todo comenzó en la cocina de casa, donde el aroma de las empanadas recién hechas y los tequeños dorados traía consigo recuerdos de celebraciones, encuentros y la calidez del hogar.
+  </p>
+  <p>
+    La inspiración fue clara: compartir la autenticidad de la comida venezolana, esa que se prepara con cariño y que cuenta historias en cada bocado. No queríamos ser solo un negocio de comida; aspirábamos a ser un pedacito de Venezuela, un lugar donde cada cliente pudiera experimentar el gusto casero y la alegría de nuestra cultura.
+  </p>
+  <p>
+    Desde aquellos primeros días, preparando pequeñas cantidades para amigos y vecinos, nos dimos cuenta de la conexión especial que se creaba a través de la comida. Cada empanada y cada tequeño se convirtió en un embajador de nuestra tradición, hecho con ingredientes frescos y siguiendo recetas que han pasado de generación en generación.
+  </p>
+  <p>
+    Hoy, Mi Ranchito se ha convertido en un espacio donde la tradición se mantiene viva. Nos enorgullece traer a tu mesa esos antojos que nos definen, manteniendo el compromiso con la calidad, el sabor auténtico y la calidez humana que nos inspira. Gracias por ser parte de nuestra historia y permitirnos compartir contigo un pedacito de Venezuela.
+  </p>
+</section>
 
     <section id="productos-destacados">
       <h2>Nuestros Productos Estrella</h2>
@@ -103,16 +119,16 @@
       <div class="grid-container">
         <div class="card">
           <div class="tag">Recomendado</div>
-          <img src="imagenes/fotos reales/4ff88427-181e-4455-b8b9-607f171465d8.png" alt="Desayuno Criollo" />
+          <img src="imagenes/imagen 15.png" alt="Desayuno Criollo" />
           <div class="card-info">
             <h3>Desayuno Criollo</h3>
-            <p class="descripcion">Dos tequeños, una empanada y salsa de la casa</p>
+            <p class="descripcion">Tres tequeños, dos empanadas y salsa de la casa</p>
             <p class="precio">$2.500</p>
           </div>
         </div>
         <div class="card">
           <div class="tag">Recomendado</div>
-          <img src="imagenes/fotos reales/7265dcbf-fc57-4b4e-9f80-b24e2a41b191.png" alt="Merienda Llanera" />
+          <img src="imagenes/imagen17.png" alt="Merienda Llanera" />
           <div class="card-info">
             <h3>Merienda Llanera</h3>
             <p class="descripcion">Dos tequeños, dos empanadas y gaseosa</p>
@@ -120,18 +136,18 @@
           </div>
         </div>
         <div class="card">
-          <img src="imagenes/fotos reales/776ac889-8f8b-4fc4-9d01-a8d99257f335.png" alt="La Explosión del Sabor" />
+          <img src="imagenes/imagen18.png" alt="La Explosión del Sabor" />
           <div class="card-info">
             <h3>La Explosión del Sabor</h3>
-            <p class="descripcion">Cuatro tequeños variados, tres empanadas y dos salsas</p>
+            <p class="descripcion">Cinco tequeños, tres empanadas y dos salsas</p>
             <p class="precio">$2.000</p>
           </div>
         </div>
         <div class="card">
-          <img src="imagenes/fotos reales/8fd120b8-c58b-4438-8185-fcfbdc67736f.png" alt="Combo Familiar" />
+          <img src="imagenes/imagen21.png" alt="Combo Familiar" />
           <div class="card-info">
             <h3>Combo Familiar</h3>
-            <p class="descripcion">Ocho empanadas, seis tequeños y gaseosa de 2L</p>
+            <p class="descripcion">Ocho empanadas, seis tequeños y gaseosa de 1.5L</p>
             <p class="precio">$3.500</p>
           </div>
         </div>
@@ -140,8 +156,62 @@
 
     <section id="testimonios">
       <h2>Lo que dicen nuestros clientes</h2>
-      <div class="testimonio">
-        <p>"Las empanadas de Mi Ranchito son las mejores que he probado fuera de Venezuela. ¡Auténtico sabor!" - María P.</p>
+      <div class="testimonios-grid">
+        <div class="testimonio-card">
+          <div class="estrellas">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="comentario-texto">"Las empanadas son increíbles, el relleno es muy generoso y la masa perfecta. ¡Sin duda volveré!"</p>
+          <p class="cliente-nombre">- Ana G.</p>
+        </div>
+        <div class="testimonio-card">
+          <div class="estrellas">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="comentario-texto">"Los tequeños son adictivos, calientitos y con el queso justo. El servicio es muy rápido y amable."</p>
+          <p class="cliente-nombre">- Carlos M.</p>
+        </div>
+        <div class="testimonio-card">
+          <div class="estrellas">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="comentario-texto">"Probé el combo familiar y fue un éxito total en casa. Todo estaba delicioso y a un precio justo."</p>
+          <p class="cliente-nombre">- Sofía R.</p>
+        </div>
+        <div class="testimonio-card">
+          <div class="estrellas">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="comentario-texto">"Me sentí como en casa. El sabor auténtico venezolano es inigualable. Las salsas son el complemento perfecto."</p>
+          <p class="cliente-nombre">- José L.</p>
+        </div>
+        <div class="testimonio-card">
+          <div class="estrellas">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="comentario-texto">"La merienda llanera es mi favorita. La combinación de tequeños y empanadas es perfecta para un antojito."</p>
+          <p class="cliente-nombre">- Valentina S.</p>
+        </div>
       </div>
     </section>
 
@@ -178,7 +248,13 @@
   </div>
 
   <!-- Scripts -->
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS (versión CDN) -->
+<!-- Primero Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Después tu script -->
+<script src="script.js"></script>
+
+
 </body>
 </html>

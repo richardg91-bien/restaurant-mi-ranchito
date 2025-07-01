@@ -1,23 +1,31 @@
+/*
+  Estilos CSS para el proyecto "Mi Ranchito - Antojos Venezolanos"
+  Autor: [Tu Nombre]
+  Fecha: [Fecha de creación o última modificación]
+*/
+
 /* RESET */
+/* Aplicamos un reset básico a todos los elementos para asegurar consistencia */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+/* Habilitamos el desplazamiento suave para las anclas */
 html {
   scroll-behavior: smooth;
 }
+/* Ajustamos el margen superior de las secciones al hacer scroll para tener en cuenta el navbar y el carrusel */
 section {
-  scroll-margin-top: 350px; /* ajustá según la altura de tu nav + header */
+  scroll-margin-top: 470px; /* ajustá según la altura de tu nav + header */
 }
+/* Ajustamos el margen superior para la sección de redes sociales */
 #redes {
   scroll-margin-top: 180px;
 }
+/* Añadimos padding superior al contenido principal para evitar que quede oculto bajo el navbar y el carrusel */
 main {
-  main {
-  padding-top: calc(70px + 300px); /* nav + carrusel */
-}
-
+  padding-top:100px; /* nav + mitad del carrusel */
 }
 
 
@@ -32,6 +40,7 @@ body {
 }
 
 /* NAVBAR */
+/* Estilos para la barra de navegación fija en la parte superior */
 nav {
   position: fixed;
   top: 0;
@@ -41,20 +50,23 @@ nav {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Contenedor interno para alinear los elementos del navbar */
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   flex-wrap: wrap;
 }
 
+/* Estilos para el área del logo que incluye imagen y texto */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
 }
+/* Estilos para la imagen del logo */
 
 .logo-img {
   width: 250px;
@@ -62,20 +74,21 @@ nav {
   max-width: 100%;
 }
 
+/* Estilos para el texto del logo (nombre y subtítulo) */
 .logo-texto h1 {
   font-size: 1.5em;
   color: #442c1a;
   font-family: Georgia, serif;
   margin: 0;
 }
-
+/* Estilos para el subtítulo del logo */
 .logo-texto p {
   font-size: 0.9em;
   color: #777;
   font-style: italic;
   margin: 0;
 }
-
+/* Estilos para los enlaces del menú de navegación */
 .menu-links {
   display: flex;
   flex-wrap: wrap;
@@ -83,23 +96,26 @@ nav {
   flex-grow: 1;
   justify-content: center;
 }
-
+/* Estilos para los enlaces individuales del menú */
 .menu-links a {
   white-space: nowrap;
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
-
+/* Estilos al pasar el cursor sobre los enlaces del menú */
 .menu-links a:hover {
   color: #b8a69a;
 }
+
+/* Estilos para la barra de búsqueda */
 
 .search-bar {
   display: flex;
   flex-shrink: 0;
 }
 
+/* Estilos para el campo de entrada de texto del buscador */
 .search-bar input {
   padding: 5px;
   border-radius: 4px 0 0 4px;
@@ -108,6 +124,7 @@ nav {
   max-width: 100%;
 }
 
+/* Estilos para el botón de buscar */
 .search-bar button {
   padding: 5px 10px;
   background-color: black;
@@ -118,42 +135,52 @@ nav {
 }
 
 /* HEADER CARRUSEL */
+/* Contenedor del carrusel en el encabezado */
+/* Contenedor del carrusel en el encabezado */
 .header-carousel {
   position: fixed;
   top: 70px; /* altura del nav */
   width: 100%;
   z-index: 999;
+  overflow: hidden; /* Evita desbordamiento de imágenes */
+  /* Añadir una altura o altura máxima al contenedor principal del carrusel */
+  height: 400px; /* Puedes ajustar esta altura según tu diseño */
+  /* o podrías usar max-height si prefieres que se ajuste en algunos casos */
 }
 
 .header-carousel .carousel,
 .header-carousel .carousel-inner,
-.header-carousel .carousel-item,
-.header-carousel img {
+.header-carousel .carousel-item {
   width: 100%;
-  height: 300px;
+  height: 100%; /* Asegura que estos elementos ocupen toda la altura del contenedor principal */
+}
+
+.header-carousel .carousel-item img {
+  width: 100%;
+  height: 100%; /* Asegura que la imagen intente ocupar el 100% de la altura de su contenedor (carousel-item) */
   display: block;
-  object-fit: cover;
+  object-fit: cover; /* Asegura que la imagen cubra el área manteniendo su relación de aspecto */
 }
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
 
 
 /* SECCIONES */
+/* Estilos generales para todas las secciones de contenido */
 section {
   padding: 40px 20px;
   text-align: center;
 }
 
+/* Estilos para los títulos de las secciones */
 section h2 {
   color: #87CEEB;
   margin-bottom: 20px;
 }
 
+/* Estilos específicos para la sección de Menús */
 #menus {
   background-color: #fff8e1;
+  /* Color de fondo para diferenciar esta sección */
 }
 
 #menus h2 {
@@ -161,6 +188,7 @@ section h2 {
 }
 
 /* CARDS */
+/* Contenedor grid para mostrar las tarjetas de productos */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -169,6 +197,7 @@ section h2 {
   padding: 20px 0;
 }
 
+/* Estilos para cada tarjeta de producto */
 .card {
   width: 100%;
   max-width: 220px;
@@ -179,10 +208,12 @@ section h2 {
   transition: transform 0.2s ease;
   cursor: pointer;
 }
-
+/* Efecto al pasar el cursor sobre la tarjeta */
 .card:hover {
   transform: translateY(-5px);
 }
+
+/* Estilos para la imagen dentro de la tarjeta */
 
 .card img {
   width: 100%;
@@ -191,18 +222,22 @@ section h2 {
   border-radius: 8px 8px 0 0;
 }
 
+/* Contenedor para la información dentro de la tarjeta */
 .card-info {
   padding: 10px;
 }
 
+/* Estilos para el título del producto en la tarjeta */
 .card-info h3 {
   margin: 10px 0 5px;
   color: #333;
 }
 
+/* Estilos para la descripción del producto en la tarjeta */
 .card-info p {
   margin: 5px 0;
 }
+/* Estilos para el precio del producto */
 
 .precio {
   font-weight: bold;
@@ -210,6 +245,7 @@ section h2 {
   font-size: 1.1em;
 }
 
+/* Estilos para la etiqueta de "Recomendado" en algunas tarjetas */
 .tag {
   background-color: #ff6600;
   color: white;
@@ -220,6 +256,7 @@ section h2 {
   border-radius: 4px;
 }
 .modal {
+  /* Estilos para el fondo oscuro del modal */
   display: none;
   position: fixed;
   z-index: 1000;
@@ -232,10 +269,11 @@ section h2 {
   align-items: center;
 }
 
+/* Estilos para el contenido principal del modal */
 .modal-content {
   background-color: #fff;
   padding: 20px;
-  width: 90%;
+  width: 90%; /* Ancho del modal */
   max-width: 320px; /* más estilo tarjeta */
   text-align: center;
   border-radius: 10px;
@@ -244,6 +282,7 @@ section h2 {
 }
 
 .modal-content img {
+  /* Estilos para la imagen dentro del modal */
   width: 100%;
   height: auto;
   max-height: 220px;
@@ -253,13 +292,69 @@ section h2 {
 }
 
 
+/* Estilos para el botón de cerrar el modal */
+
+/* Estilos para la sección de Testimonios */
+#testimonios {
+  background-color: #f8f8f8; /* Un color de fondo sutil para diferenciar la sección */
+}
+
+/* Contenedor grid para mostrar las tarjetas de testimonios */
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste el tamaño mínimo para testimonios */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px 0;
+  max-width: 1000px; /* Limita el ancho del grid */
+  margin: 0 auto; /* Centra el grid */
+}
+
+/* Estilos para cada tarjeta de testimonio */
+.testimonio-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left; /* Alinea el texto a la izquierda dentro de la tarjeta */
+  display: flex; /* Usar flexbox para organizar contenido */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+/* Estilos para el contenedor de estrellas */
+.testimonio-card .estrellas {
+  color: gold; /* Color para las estrellas */
+  margin-bottom: 10px; /* Espacio debajo de las estrellas */
+}
+
+.testimonio-card .estrellas i {
+  margin-right: 2px; /* Espacio entre estrellas */
+}
+
+/* Estilos para el texto del comentario */
+.testimonio-card .comentario-texto {
+  font-style: italic; /* Estilo cursiva para el comentario */
+  margin-bottom: 15px; /* Espacio debajo del comentario */
+}
+
+/* Estilos para el nombre del cliente */
+.testimonio-card .cliente-nombre {
+  font-weight: bold; /* Nombre del cliente en negrita */
+  text-align: right; /* Alinea el nombre a la derecha */
+  color: #555; /* Color un poco más oscuro para el nombre */
+  margin-top: auto; /* Empuja el nombre hacia la parte inferior de la tarjeta */
+}
+
 
 /* FOOTER */
+/* Estilos para el pie de página */
 footer {
   background-color: #eadccf;
-  color: white;
+  color: black; /* Cambié el color del texto a negro para mejor contraste */
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px 10px; /* Añadido padding */
 }
 
 footer a {
@@ -267,9 +362,11 @@ footer a {
   text-decoration: none;
   margin: 0 5px;
 }
+/* Estilos para los párrafos en el footer */
 footer p {
   color: black;
 }
+/* Estilos para la sección de redes sociales */
 
 .social-media a {
   color: black;
@@ -284,6 +381,7 @@ footer p {
 }
 
 /* MÚSICA */
+/* Estilos para el reproductor de música flotante */
 .music-player {
   position: fixed;
   bottom: 20px;
@@ -292,8 +390,10 @@ footer p {
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Asegura que esté por encima del modal si ambos están visibles */
 }
 
+/* Estilos para el botón de reproducir/pausar música */
 .music-player button {
   background: none;
   border: none;
@@ -302,7 +402,10 @@ footer p {
   cursor: pointer;
 }
 
+/* Estilos para el texto de copyright */
+
 /* RESPONSIVE */
+/* Media query para pantallas más pequeñas (hasta 768px) */
 @media (max-width: 768px) {
   .logo-img {
     width: 180px;
@@ -328,6 +431,7 @@ footer p {
   }
 }
 
+/* Media query para pantallas aún más pequeñas (hasta 480px) */
 @media (max-width: 480px) {
   .logo-img {
     width: 140px;
