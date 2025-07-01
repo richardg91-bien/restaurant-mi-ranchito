@@ -16,16 +16,17 @@ html {
   scroll-behavior: smooth;
 }
 /* Ajustamos el margen superior de las secciones al hacer scroll para tener en cuenta el navbar y el carrusel */
+/* Altura del nav (70px) + altura del carrusel (300px) = 370px */
 section {
-  scroll-margin-top: 470px; /* ajustá según la altura de tu nav + header */
+  scroll-margin-top: 370px;
 }
 /* Ajustamos el margen superior para la sección de redes sociales */
 #redes {
-  scroll-margin-top: 180px;
+  scroll-margin-top: 370px; /* Ajusta si esta sección tiene un offset diferente */
 }
 /* Añadimos padding superior al contenido principal para evitar que quede oculto bajo el navbar y el carrusel */
 main {
-  padding-top:100px; /* nav + mitad del carrusel */
+  padding-top: 370px; /* Dejamos un pequeño espacio adicional si se desea, o 0 si no */
 }
 
 
@@ -36,7 +37,7 @@ body {
   background-color: #fff;
   color: #333;
   overflow-x: hidden;
-  padding-top: 400px; /* espacio para nav + carrusel */
+  /* padding-top: 400px; *//* Eliminado */
 }
 
 /* NAVBAR */
@@ -55,7 +56,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px;
+  padding: 10px 20px;
   flex-wrap: wrap;
 }
 
@@ -136,32 +137,29 @@ nav {
 
 /* HEADER CARRUSEL */
 /* Contenedor del carrusel en el encabezado */
-/* Contenedor del carrusel en el encabezado */
 .header-carousel {
   position: fixed;
   top: 70px; /* altura del nav */
   width: 100%;
   z-index: 999;
   overflow: hidden; /* Evita desbordamiento de imágenes */
-  /* Añadir una altura o altura máxima al contenedor principal del carrusel */
-  height: 400px; /* Puedes ajustar esta altura según tu diseño */
-  /* o podrías usar max-height si prefieres que se ajuste en algunos casos */
 }
 
 .header-carousel .carousel,
 .header-carousel .carousel-inner,
-.header-carousel .carousel-item {
+.header-carousel .carousel-item,
+.header-carousel img {
   width: 100%;
-  height: 100%; /* Asegura que estos elementos ocupen toda la altura del contenedor principal */
-}
-
-.header-carousel .carousel-item img {
-  width: 100%;
-  height: 100%; /* Asegura que la imagen intente ocupar el 100% de la altura de su contenedor (carousel-item) */
+  height: 300px;
   display: block;
-  object-fit: cover; /* Asegura que la imagen cubra el área manteniendo su relación de aspecto */
+  object-fit: cover;
+  /* Asegura que la imagen cubra el área sin distorsionarse */
 }
-
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 
 /* SECCIONES */
@@ -176,6 +174,52 @@ section h2 {
   color: #87CEEB;
   margin-bottom: 20px;
 }
+
+#nosotros {
+    background-color: #f8f4e3; /* Color crema suave */
+    border: 2px solid #e0c9a6; /* Borde sutil en tono tierra */
+    padding: 30px; /* Espaciado interno */
+    margin: 30px auto; /* Margen superior e inferior y centrado */
+    max-width: 800px; /* Ancho máximo para mejor lectura */
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#nosotros h2 {
+    color: #a0522d; /* Un marrón tierra para el título */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2em; /* Tamaño de fuente del título */
+}
+
+#nosotros p {
+    color: #5a4a3a; /* Color de texto de párrafo (marrón oscuro) */
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+    margin-bottom: 15px; /* Espacio entre párrafos */
+    font-size: 1.1em; /* Tamaño de fuente del párrafo */
+}
+
+/* Estilo para la primera letra de cada párrafo (opcional) */
+#nosotros p:first-of-type::first-letter {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #c0392b; /* Un toque de rojo ladrillo */
+    float: left;
+    margin-right: 8px;
+    line-height: 0.8;
+}
+
+/* Divisor sutil después del título (opcional) */
+#nosotros h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #c0392b; /* Rojo ladrillo */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
 
 /* Estilos específicos para la sección de Menús */
 #menus {
