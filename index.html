@@ -22,29 +22,32 @@
 </head>
 <body>
   <nav>
-    <div class="nav-wrapper">
-      <div class="logo">
-        <img src="imagenes/logo2.png" alt="Logo Mi Ranchito" class="logo-img" />
-        <div class="logo-texto">
-          <h1>Mi Ranchito</h1>
-          <p>Antojos Venezolanos</p>
-        </div>
-      </div>
-      <div class="menu-links">
-  <a href="#productos-destacados">Platos</a>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#menus">Combinaciones</a>
-  <a href="#testimonios">Testimonios</a>
-  <a href="#redes">Contacto</a>
-</div>
-
-      <div class="search-bar">
-        <input type="text" id="buscador" placeholder="Buscar plato...">
-
-        <button id="btnBuscar">Buscar</button>
+  <div class="nav-wrapper">
+    <div class="logo">
+      <img src="imagenes/logo2.png" alt="Logo Mi Ranchito" class="logo-img" />
+      <div class="logo-texto">
+        <h1>Mi Ranchito</h1>
+        <p>Antojos Venezolanos</p>
       </div>
     </div>
-  </nav>
+    <!-- Botón para el menú hamburguesa (visible en pantallas pequeñas) -->
+    <button class="menu-toggle" aria-label="Alternar menú de navegación">
+      <i class="bi bi-list"></i> <!-- Icono de hamburguesa de Bootstrap Icons -->
+    </button>
+    <div class="menu-links">
+      <a href="#productos-destacados">Platos</a>
+      <a href="#menus">Combinaciones</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#redes">Contacto</a>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="buscador" placeholder="Buscar plato...">
+      <button id="btnBuscar">Buscar</button>
+    </div>
+  </div>
+</nav>
+
 
   <header class="header-carousel">
   <div id="carruselHeader" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">

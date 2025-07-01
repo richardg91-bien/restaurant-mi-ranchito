@@ -131,3 +131,16 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   interval: 3000, // Define el intervalo de cambio entre diapositivas en milisegundos (3 segundos).
   ride: 'carousel' // Inicia el carrusel automáticamente al cargar la página.
 });
+// --- Funcionalidad del Menú Hamburguesa ---
+
+// Selecciona el botón del menú hamburguesa y el contenedor del navbar
+const menuToggle = document.querySelector('.menu-toggle');
+const navWrapper = document.querySelector('.nav-wrapper');
+
+// Agrega un event listener al botón de hamburguesa
+if (menuToggle && navWrapper) {
+  menuToggle.addEventListener('click', () => {
+    // Alterna la clase 'menu-active' en el contenedor del navbar
+    navWrapper.classList.toggle('menu-active');
+  });
+}

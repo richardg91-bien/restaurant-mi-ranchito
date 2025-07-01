@@ -21,11 +21,11 @@ section {
 }
 /* Ajustamos el margen superior para la sección de redes sociales */
 #redes {
-  scroll-margin-top: 180px;
+  scroll-margin-top: 360px;
 }
 /* Añadimos padding superior al contenido principal para evitar que quede oculto bajo el navbar y el carrusel */
 main {
-  padding-top:100px; /* nav + mitad del carrusel */
+  padding-top:10px; /* nav + mitad del carrusel */
 }
 
 
@@ -55,7 +55,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px;
+  padding: 5px 20px;
   flex-wrap: wrap;
 }
 
@@ -107,6 +107,51 @@ nav {
 .menu-links a:hover {
   color: #b8a69a;
 }
+/* Estilos para el botón del menú hamburguesa */
+.menu-toggle {
+  display: none; /* Oculto por defecto en pantallas grandes */
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #333; /* Color del icono */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-links {
+    display: none; /* Oculta los enlaces en pantallas pequeñas */
+    flex-direction: column;
+    width: 100%;
+    background-color: #eadccf; /* Color de fondo para el menú desplegable */
+    position: absolute;
+    top: 70px; /* Ajustar si la altura del navbar cambia */
+    left: 0;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 998; /* Asegura que esté sobre el contenido pero debajo del navbar */
+  }
+
+  .menu-links a {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #b8a69a; /* Separador entre enlaces */
+  }
+
+  .menu-links a:last-child {
+    border-bottom: none; /* Elimina el borde del último enlace */
+  }
+
+  .menu-toggle {
+    display: block; /* Muestra el botón de hamburguesa en pantallas pequeñas */
+  }
+
+  /* Estilo para mostrar el menú cuando está activo (se añadirá con JS) */
+  .nav-wrapper.menu-active .menu-links {
+    display: flex; /* Muestra el menú desplegable */
+  }
+}
+
 
 /* Estilos para la barra de búsqueda */
 
@@ -139,12 +184,12 @@ nav {
 /* Contenedor del carrusel en el encabezado */
 .header-carousel {
   position: fixed;
-  top: 70px; /* altura del nav */
+  top: 60px; /* altura del nav */
   width: 100%;
   z-index: 999;
   overflow: hidden; /* Evita desbordamiento de imágenes */
   /* Añadir una altura o altura máxima al contenedor principal del carrusel */
-  height: 400px; /* Puedes ajustar esta altura según tu diseño */
+  height: 300px; /* Puedes ajustar esta altura según tu diseño */
   /* o podrías usar max-height si prefieres que se ajuste en algunos casos */
 }
 
@@ -162,6 +207,15 @@ nav {
   object-fit: cover; /* Asegura que la imagen cubra el área manteniendo su relación de aspecto */
 }
 
+#nosotros {
+    background-color: #f8f4e3; /* Color crema suave */
+    border: 2px solid #e0c9a6; /* Borde sutil en tono tierra */
+    padding: 30px; /* Espaciado interno */
+    margin: 0 auto 30px auto; /* Margen superior (0), horizontal (auto), inferior (30px) */
+    max-width: 800px; /* Ancho máximo para mejor lectura */
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 
 
 /* SECCIONES */
@@ -217,14 +271,15 @@ section h2 {
 
 .card img {
   width: 100%;
-  height: 220px;
+  height: 220%;  /* Modifica esta línea a 100% */
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
 
+
 /* Contenedor para la información dentro de la tarjeta */
 .card-info {
-  padding: 10px;
+  padding: 8px;
 }
 
 /* Estilos para el título del producto en la tarjeta */
@@ -405,43 +460,47 @@ footer p {
 /* Estilos para el texto de copyright */
 
 /* RESPONSIVE */
-/* Media query para pantallas más pequeñas (hasta 768px) */
-@media (max-width: 768px) {
-  .logo-img {
-    width: 180px;
-  }
-
-  .menu-links {
-    justify-content: flex-start;
-  }
-
-  .search-bar {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 10px;
-    justify-content: center;
-  }
-
-  .search-bar input {
-    width: 70%;
-  }
-
-  .logo-texto h1 {
-    font-size: 1.3em;
-  }
+/* Estilos para el botón del menú hamburguesa */
+.menu-toggle {
+  display: none; /* Oculto por defecto en pantallas grandes */
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #333; /* Color del icono */
 }
 
-/* Media query para pantallas aún más pequeñas (hasta 480px) */
-@media (max-width: 480px) {
-  .logo-img {
-    width: 140px;
-  }
-
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
   .menu-links {
-    gap: 10px;
+    display: none; /* Oculta los enlaces en pantallas pequeñas */
+    flex-direction: column;
+    width: 100%;
+    background-color: #eadccf; /* Color de fondo para el menú desplegable */
+    position: absolute;
+    top: 70px; /* Ajustar si la altura del navbar cambia */
+    left: 0;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 998; /* Asegura que esté sobre el contenido pero debajo del navbar */
   }
 
-  .search-bar input {
-    width: 100%;
+  .menu-links a {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #b8a69a; /* Separador entre enlaces */
+  }
+
+  .menu-links a:last-child {
+    border-bottom: none; /* Elimina el borde del último enlace */
+  }
+
+  .menu-toggle {
+    display: block; /* Muestra el botón de hamburguesa en pantallas pequeñas */
+  }
+
+  /* Estilo para mostrar el menú cuando está activo (se añadirá con JS) */
+  .nav-wrapper.menu-active .menu-links {
+    display: flex; /* Muestra el menú desplegable */
   }
 }
