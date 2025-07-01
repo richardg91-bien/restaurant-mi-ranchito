@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Ranchito - Antojos Venezolanos</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <div class="logo">
+        <img src="imagenes/logo2.png" alt="Logo Mi Ranchito" class="logo-img" />
+        <div class="logo-texto">
+          <h1>Mi Ranchito</h1>
+          <p>Antojos Venezolanos</p>
+        </div>
+      </div>
+      <div class="menu-links">
+  <a href="#productos-destacados">Platos</a>
+  <a href="#menus">Combinaciones</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#testimonios">Testimonios</a>
+  <a href="#redes">Contacto</a>
+</div>
+
+      <div class="search-bar">
+        <input type="text" id="buscador" placeholder="Buscar plato..." />
+        <button id="btnBuscar">Buscar</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="header-carousel">
+  <div id="carruselHeader" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imagenes/fotos reales/776ac889-8f8b-4fc4-9d01-a8d99257f335.png" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/fotos reales/afd53ca5-7ef0-4d2b-b44f-8bd9dccf80a3.png" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/fotos reales/d264920c-9a67-4591-8813-2aac041c781b.png" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section id="nosotros">
+      <h2>Nuestra Historia</h2>
+      <p>
+        Mi Ranchito nació del amor por los auténticos sabores venezolanos, trayendo a tu mesa la tradición y el gusto casero de nuestras empanadas y tequeños.
+      </p>
+    </section>
+
+    <section id="productos-destacados">
+      <h2>Nuestros Productos Estrella</h2>
+      <div class="grid-container">
+        <div class="card">
+          <img src="imagenes/imagen7.png" alt="Dúo Dinámico" />
+          <div class="card-info">
+            <h3>Dúo Dinámico</h3>
+            <p class="descripcion">Dos empanadas a elección</p>
+            <p class="descripcion">Salsa de la casa.</p>
+            <p class="precio">$2.500</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imagenes/imagen4.png" alt="Antojito Venezolano" />
+          <div class="card-info">
+            <h3>Antojito Venezolano</h3>
+            <p class="descripcion">Tres empanadas a selección</p>
+            <p class="descripcion">Salsa de la casa</p>
+            <p class="precio">$1.600</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imagenes/imgen2.png" alt="La Empanada Familiar" />
+          <div class="card-info">
+            <h3>La Empanada Familiar</h3>
+            <p class="descripcion">Seis empanadas a selección</p>
+            
+            <p class="descripcion">Una gaseosa de 1.5 ltrs</p>
+            <p class="precio">$2.000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menus">
+      <h2>🔥 Combinaciones</h2>
+      <div class="grid-container">
+        <div class="card">
+          <div class="tag">Recomendado</div>
+          <img src="imagenes/fotos reales/4ff88427-181e-4455-b8b9-607f171465d8.png" alt="Desayuno Criollo" />
+          <div class="card-info">
+            <h3>Desayuno Criollo</h3>
+            <p class="descripcion">Dos tequeños, una empanada y salsa de la casa</p>
+            <p class="precio">$2.500</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recomendado</div>
+          <img src="imagenes/fotos reales/7265dcbf-fc57-4b4e-9f80-b24e2a41b191.png" alt="Merienda Llanera" />
+          <div class="card-info">
+            <h3>Merienda Llanera</h3>
+            <p class="descripcion">Dos tequeños, dos empanadas y gaseosa</p>
+            <p class="precio">$1.600</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imagenes/fotos reales/776ac889-8f8b-4fc4-9d01-a8d99257f335.png" alt="La Explosión del Sabor" />
+          <div class="card-info">
+            <h3>La Explosión del Sabor</h3>
+            <p class="descripcion">Cuatro tequeños variados, tres empanadas y dos salsas</p>
+            <p class="precio">$2.000</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imagenes/fotos reales/8fd120b8-c58b-4438-8185-fcfbdc67736f.png" alt="Combo Familiar" />
+          <div class="card-info">
+            <h3>Combo Familiar</h3>
+            <p class="descripcion">Ocho empanadas, seis tequeños y gaseosa de 2L</p>
+            <p class="precio">$3.500</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="testimonio">
+        <p>"Las empanadas de Mi Ranchito son las mejores que he probado fuera de Venezuela. ¡Auténtico sabor!" - María P.</p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      
+    </section>
+  </main>
+
+  <footer>
+    
+    <div id="redes" class="social-media"></div>
+      <p>Síguenos en:</p>
+      <a href="https://facebook.com" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Facebook</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i> Instagram</a>
+      <a href="https://web.whatsapp.com/" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Whatsapp</a>
+      <a href="https://x.com" target="_blank" rel="noopener"><i class="bi bi-twitter"></i> Twitter</a>
+    </div>
+    <div class="music-player">
+      <audio id="audio" src="audio/Mi Ranchito - Maracaibo 15 (Letra) HD (1).mp3"></audio>
+      <button id="toggleMusic">🎵 Reproducir Música</button>
+    </div>
+    <p class="copyright">&copy; 2023 Mi Ranchito</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <img id="modal-img" src="" alt="Imagen ampliada" />
+      <h3 id="modal-titulo"></h3>
+      <p id="modal-descripcion"></p>
+      <p id="modal-precio" class="precio"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
