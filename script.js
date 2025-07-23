@@ -133,6 +133,8 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 });
 // --- Funcionalidad del Menú Hamburguesa ---
 
+/// --- Funcionalidad del Menú Hamburguesa ---
+
 // Selecciona el botón del menú hamburguesa y el contenedor del navbar
 const menuToggle = document.querySelector('.menu-toggle');
 const navWrapper = document.querySelector('.nav-wrapper');
