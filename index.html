@@ -144,7 +144,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="imagenes/imagen21.png" alt="Combo Familiar" />
+          <img src="imagenes/Deliciosa combinación de sabores fritos.png" alt="Combo Familiar" />
           <div class="card-info">
             <h3>Combo Familiar</h3>
             <p class="descripcion">Ocho empanadas, seis tequeños y gaseosa de 1.5L</p>
@@ -221,20 +221,36 @@
   </main>
 
   <footer>
+  <div class="footer-contenedor d-flex justify-content-between align-items-center p-3 flex-wrap w-100">
     
-    <div id="redes" class="social-media"></div>
-      <p>Síguenos en:</p>
+    <!-- QR a la izquierda -->
+    <div class="footer-qr">
+      <img src="imagenes/qr2.png" alt="QR Mi Ranchito" class="qr-img">
+    </div>
+
+    <!-- Redes sociales centradas -->
+    <div id="redes" class="social-media text-center flex-grow-1">
+      <p class="mb-1">Síguenos en:</p>
       <a href="https://facebook.com" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Facebook</a>
       <a href="https://instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i> Instagram</a>
-      <a href="https://web.whatsapp.com/" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Whatsapp</a>
       <a href="https://x.com" target="_blank" rel="noopener"><i class="bi bi-twitter"></i> Twitter</a>
     </div>
-    <div class="music-player">
+
+    <!-- Música a la derecha -->
+    <div class="music-player text-end">
       <audio id="audio" src="audio/Mi Ranchito - Maracaibo 15 (Letra) HD (1).mp3"></audio>
       <button id="toggleMusic">🎵 Reproducir Música</button>
     </div>
-    <p class="copyright">&copy; 2023 Mi Ranchito</p>
-  </footer>
+
+  </div>
+
+ 
+
+
+  <!-- Copyright fuera del contenedor -->
+  <p class="text-center copyright mb-0 p-2">&copy; 2023 richardg91</p>
+</footer>
+
 
   <!-- Modal -->
   <div id="modal" class="modal">

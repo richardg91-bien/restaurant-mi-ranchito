@@ -469,6 +469,37 @@ footer p {
   cursor: pointer;
   color: #333; /* Color del icono */
 }
+footer.footer-contenedor {
+  background-color: #f8f9fa;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-qr img.qr-img {
+  max-width: 80px;
+  height: auto;
+  padding: 5px;
+}
+
+footer .social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+footer .social-media a:hover {
+  color: #c00;
+}
+
+.music-player button {
+  background-color: transparent;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -484,6 +515,12 @@ footer p {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 998; /* Asegura que esté sobre el contenido pero debajo del navbar */
   }
+  @media (max-width: 768px) {
+  .header-carousel {
+    display: none;
+  }
+}
+
 
   .menu-links a {
     padding: 10px 0;
@@ -502,5 +539,58 @@ footer p {
   /* Estilo para mostrar el menú cuando está activo (se añadirá con JS) */
   .nav-wrapper.menu-active .menu-links {
     display: flex; /* Muestra el menú desplegable */
+  }
+}
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Distribuye el espacio */
+    padding: 10px 15px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  .logo {
+    flex-shrink: 0; /* Evita que el logo se encoja */
+    gap: 5px; /* Reduce el espacio entre la imagen y el texto del logo */
+  }
+
+  .logo-img {
+    width: 150px; /* Ajusta el ancho del logo para pantallas pequeñas */
+  }
+
+  .logo-texto h1 {
+    font-size: 1.2em; /* Reduce el tamaño del título del logo */
+  }
+
+  .logo-texto p {
+    font-size: 0.8em; /* Reduce el tamaño del subtítulo del logo */
+  }
+
+   .menu-toggle {
+    display: block; /* Asegura que sea visible */
+    order: -1; /* Le da un orden menor para que aparezca primero (más a la izquierda) */
+    margin-right: 10px; /* Agrega un pequeño margen a la derecha si es necesario */
+  }
+
+  .menu-links {
+    /* Estilos para posicionar el menú desplegable */
+    position: absolute;
+    top: 60px; /* Ajusta la posición debajo del navbar */
+    left: 0;
+    width: 100%;
+    background-color: #b8a69a; /* Color de fondo del menú */
+    flex-direction: column;
+    display: none; /* Oculto por defecto */
+  }
+
+  .menu-links.menu-active {
+    display: flex; /* Muestra el menú cuando tiene la clase menu-active */
+  }
+
+  .search-bar {
+    width: 100%; /* Ocupa todo el ancho disponible debajo del menú */
+    order: 1; /* Coloca la barra de búsqueda debajo del menú */
+    margin-top: 10px;
+    padding: 0 15px;
   }
 }

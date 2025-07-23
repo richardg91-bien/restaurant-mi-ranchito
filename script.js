@@ -146,3 +146,16 @@ if (menuToggle && navWrapper) {
     navWrapper.classList.toggle('menu-active');
   });
 }
+
+// Cierra el menú responsive al hacer clic en un enlace del menú
+const menuLinks = document.querySelectorAll('.menu-links a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navWrapper.classList.remove('menu-active');
+  });
+});
+
+
+
+
